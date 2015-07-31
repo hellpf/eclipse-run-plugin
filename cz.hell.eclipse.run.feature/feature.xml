@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="cz.hell.eclipse.run.feature"
+      label="Run/Debug Plug-in"
+      version="1.0.4"
+      provider-name="Jan Loose (hell)"
+      plugin="cz.hell.eclipse.run">
+   <install-handler/>
+
+   <description url="http://www.loose.cz/index/plugins/eclipse/">
+      Run/Debug Plug-in
+   </description>
+
+   <copyright url="http://www.loose.cz/index/plugins/eclipse/">
+      Copyright 2008 Jan Loose (hell)
+
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+   </copyright>
+
+   <license url="http://www.loose.cz/index/plugins/eclipse/">
+      Copyright (c) 2008; Jan Loose (hell);
+   </license>
+
+   <url>
+      <update label="Run/Debug Plug-in" url="http://web.loose.cz/plugins/eclipse/"/>
+      <discovery label="Run/Debug Plug-in" url="http://web.loose.cz/plugins/eclipse/"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.debug.core"/>
+      <import plugin="org.eclipse.debug.ui"/>
+   </requires>
+
+   <plugin
+         id="cz.hell.eclipse.run"
+         download-size="0"
+         install-size="0"
+         version="1.0.4"
+         unpack="false"/>
+
+</feature>

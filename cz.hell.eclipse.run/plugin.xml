@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category name="Run/Debug" id="run">
+      </category>
+      <view
+            name="Run/Debug"
+            icon="icons/run-debug.gif"
+            category="run"
+            class="cz.hell.eclipse.run.views.RunView"
+            id="cz.hell.eclipse.runview.views.RunView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="cz.hell.eclipse.runview.views.RunView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="cz.hell.eclipse.run.dialog.run"
+            contextId="org.eclipse.ui.globalScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="ALT+R">
+      </key>
+      <key
+            commandId="cz.hell.eclipse.run.dialog.debug"
+            contextId="org.eclipse.ui.globalScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="ALT+D">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="org.eclipse.debug.ui.category.run"
+            defaultHandler="cz.hell.eclipse.run.actions.RunDialogAction"
+            description="Open quick run dialog..."
+            id="cz.hell.eclipse.run.dialog.run"
+            name="Run Dialog">
+      </command>
+      <command
+            categoryId="org.eclipse.debug.ui.category.run"
+            defaultHandler="cz.hell.eclipse.run.actions.DebugDialogAction"
+            description="Open quick debug dialog..."
+            id="cz.hell.eclipse.run.dialog.debug"
+            name="Debug Dialog">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="cz.hell.eclipse.run.actionSet"
+            label="Run/Debug"
+            visible="true">
+       <menu id="org.eclipse.ui.run" label="&amp;Run">
+           <groupMarker name="RunDebugGroup"/>
+       </menu>
+       <action
+               class="cz.hell.eclipse.run.actions.RunDialogAction"
+               definitionId="cz.hell.eclipse.run.dialog.run"
+               icon="icons/run_exc.gif"
+               id="cz.hell.eclipse.run.action.run"
+               label="&amp;Run..."
+               menubarPath="org.eclipse.ui.run/RunDebugGroup"
+               style="push"
+               tooltip="Open run dialog...">
+         </action>
+         <action
+               class="cz.hell.eclipse.run.actions.DebugDialogAction"
+               definitionId="cz.hell.eclipse.run.dialog.debug"
+               icon="icons/debug_exc.gif"
+               id="cz.hell.eclipse.run.action.debug"
+               label="&amp;Debug..."
+               menubarPath="org.eclipse.ui.run/RunDebugGroup"
+               style="push"
+               tooltip="Open debug dialog...">
+         </action>
+      </actionSet>
+   </extension>
+
+</plugin>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="http://web.loose.cz/plugins/eclipse/">
+      Run/Debug Plug-in
+   </description>
+   <feature url="features/cz.hell.eclipse.run.feature_1.0.4.jar" id="cz.hell.eclipse.run.feature" version="1.0.4">
+      <category name="Eclipse 3.3-3.4"/>
+   </feature>
+   <category-def name="Eclipse 3.3-3.4" label="Eclipse 3.3 - 3.4 plugins">
+      <description>
+         Eclipse 3.3 - 3.4 compatible plugins provided by Jan Loose (hell)
+      </description>
+   </category-def>
+</site>
